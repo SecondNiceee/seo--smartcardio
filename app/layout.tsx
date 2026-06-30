@@ -142,11 +142,11 @@ export const metadata: Metadata = {
             'Беспроводной кардиограф СмартКардио® — ЭКГ и сатурация без геля и проводов. Результат сразу в телефоне. Российское производство с доставкой по всей России.',
         images: [
             {
-                url: '/images/for-users.png',
+                url: '/images/smartcardioS1.webp',
                 width: 1200,
                 height: 630,
                 alt: 'Портативный кардиограф СмартКардио® для измерения ЭКГ дома',
-                type: 'image/png',
+                type: 'image/webp',
             },
             {
                 url: '/images/phones.png',
@@ -162,7 +162,7 @@ export const metadata: Metadata = {
         title: 'СмартКардио® — портативный кардиограф для ЭКГ дома',
         description:
             'Снимите ЭКГ за 20 секунд без гелей и проводов. Запись 6 отведений и мгновенная расшифровка на основе ИИ.',
-        images: ['/images/for-users.png'],
+        images: ['/images/smartcardioS1.webp'],
         creator: '@smartcardio',
         site: '@smartcardio',
     },
