@@ -8,6 +8,22 @@ export default function robots(): MetadataRoute.Robots {
       {
         userAgent: "*",
         allow: "/",
+        disallow: ["/api/", "/_next/", "/congratulation"],
+      },
+      {
+        userAgent: "Googlebot",
+        allow: "/",
+        disallow: ["/api/", "/congratulation"],
+      },
+      {
+        userAgent: "Yandex",
+        allow: "/",
+        disallow: ["/api/", "/congratulation"],
+        crawlDelay: 1,
+      },
+      {
+        userAgent: "Bingbot",
+        allow: "/",
         disallow: ["/api/", "/congratulation"],
       },
     ],
