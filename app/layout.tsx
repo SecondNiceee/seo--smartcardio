@@ -291,15 +291,6 @@ export default function RootLayout({
                 __html: yandexMetrikaScript
             }}
         />
-        <noscript>
-            <div>
-                <img
-                    src="https://mc.yandex.ru/watch/91617395"
-                    style={{ position: "absolute", left: "-9999px" }}
-                    alt=""
-                />
-            </div>
-        </noscript>
 
         </body>
         </html>
