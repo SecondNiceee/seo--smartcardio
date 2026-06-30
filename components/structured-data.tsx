@@ -49,7 +49,12 @@ export const schemaOrganization = {
     width: 200,
     height: 60,
   },
-  description: "Производитель портативного кардиографа СмартКардио® для домашнего контроля сердечного ритма.",
+  description: "Российский производитель портативного кардиографа СмартКардио® для домашнего контроля сердечного ритма.",
+  foundingDate: "2020",
+  address: {
+    "@type": "PostalAddress",
+    addressCountry: "RU",
+  },
   contactPoint: {
     "@type": "ContactPoint",
     contactType: "customer support",
@@ -126,6 +131,27 @@ export const schemaProduct = {
   sku: "SMARTCARDIO-V1",
   mpn: "SC-V1",
   category: "Бытовые приборы для здоровья / Кардиограф",
+  material: "Медицинский пластик",
+  weight: {
+    "@type": "QuantitativeValue",
+    value: "500",
+    unitCode: "GRM",
+  },
+  width: {
+    "@type": "QuantitativeValue",
+    value: "24",
+    unitCode: "CMT",
+  },
+  depth: {
+    "@type": "QuantitativeValue",
+    value: "33",
+    unitCode: "CMT",
+  },
+  height: {
+    "@type": "QuantitativeValue",
+    value: "5",
+    unitCode: "CMT",
+  },
   offers: {
     "@type": "Offer",
     url: `${siteUrl}/#order`,

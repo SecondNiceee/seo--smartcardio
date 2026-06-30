@@ -152,6 +152,8 @@ export const metadata: Metadata = {
         description:
             'Снимите ЭКГ за 20 секунд без гелей и проводов. Запись 6 отведений и мгновенная расшифровка на основе ИИ.',
         images: ['/images/for-users.png'],
+        creator: '@smartcardio',
+        site: '@smartcardio',
     },
     robots: {
         index: true,
