@@ -1,7 +1,18 @@
+import type { Metadata } from "next"
 import Link from "next/link"
 import { CheckCircle } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { ResponsivePicture } from "@/components/responsive-picture"
+
+export const metadata: Metadata = {
+  title: "Спасибо за заказ",
+  description:
+    "Спасибо за заказ кардиографа СмартКардио®. Ваш заказ успешно оформлен.",
+  robots: {
+    index: false,
+    follow: false,
+  },
+}
 
 export default function CongratulationPage() {
   return (

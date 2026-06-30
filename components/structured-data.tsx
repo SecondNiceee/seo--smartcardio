@@ -275,6 +275,53 @@ export const schemaFaq = {
   ],
 }
 
+export const schemaHowTo = {
+  "@type": "HowTo",
+  "@id": `${siteUrl}/#howto`,
+  name: "Как снять ЭКГ с помощью портативного кардиографа СмартКардио®",
+  description:
+    "Пошаговая инструкция по использованию беспроводного кардиографа СмартКардио® для измерения ЭКГ дома без гелей и проводов.",
+  image: `${siteUrl}/images/for-users.png`,
+  totalTime: "PT5M",
+  step: [
+    {
+      "@type": "HowToStep",
+      position: 1,
+      name: "Установите приложение",
+      text: "Скачайте бесплатное мобильное приложение СмартКардио® на смартфон из RuStore, Google Play, AppGallery или TestFlight и зарегистрируйтесь.",
+      image: `${siteUrl}/images/step3.jpg`,
+    },
+    {
+      "@type": "HowToStep",
+      position: 2,
+      name: "Снимите ЭКГ за 20 секунд",
+      text: "Приложите прибор СмартКардио® к телу согласно инструкции — без геля и проводов. Устройство зарегистрирует 6 отведений ЭКГ, сатурацию и пульсовую волну.",
+      image: `${siteUrl}/images/step1.jpg`,
+    },
+    {
+      "@type": "HowToStep",
+      position: 3,
+      name: "Получите результат и расшифровку",
+      text: "Запись мгновенно появится в приложении вместе с автоматической расшифровкой на основе ИИ и сохранится в личном архиве в формате PDF для консультации с врачом.",
+      image: `${siteUrl}/images/step2.jpg`,
+    },
+  ],
+}
+
+export const schemaVideoObject = {
+  "@type": "VideoObject",
+  "@id": `${siteUrl}/#video`,
+  name: "Как пользоваться кардиографом СмартКардио® — видеоинструкция",
+  description:
+    "Видеоинструкция по использованию портативного кардиографа СмартКардио® для измерения ЭКГ и сатурации дома.",
+  thumbnailUrl: `${siteUrl}/images/smartcardioStart.webp`,
+  uploadDate: "2024-01-01T00:00:00Z",
+  duration: "PT5M",
+  contentUrl: `${siteUrl}/videos/how-to-use.mp4`,
+  embedUrl: `${siteUrl}/videos/how-to-use.mp4`,
+  publisher: { "@id": `${siteUrl}/#organization` },
+}
+
 // ─────────────────────────────────────────────────────────────────────────────
 // Single @graph payload — all schemas combined
 // ─────────────────────────────────────────────────────────────────────────────
@@ -289,6 +336,8 @@ const structuredData = {
     schemaProduct,
     schemaSoftwareApp,
     schemaFaq,
+    schemaHowTo,
+    schemaVideoObject,
   ],
 }
 

@@ -1,4 +1,4 @@
-import type { Metadata } from 'next'
+import type { Metadata, Viewport } from 'next'
 import { Geist, Geist_Mono } from 'next/font/google'
 import { StructuredData } from '@/components/structured-data'
 import { CookieBanner } from '@/components/cookie-banner'
@@ -19,6 +19,13 @@ const yandexMetrikaScript = `
     ym(91617395, 'init', {webvisor:true, clickmap:true, referrer: document.referrer, url: location.href, accurateTrackBounce:true, trackLinks:true});
 `;
 
+export const viewport: Viewport = {
+    width: 'device-width',
+    initialScale: 1,
+    maximumScale: 5,
+    themeColor: '#ffffff',
+}
+
 export const metadata: Metadata = {
     metadataBase: new URL(siteUrl),
     title: {
@@ -28,59 +35,148 @@ export const metadata: Metadata = {
     description:
         'СмартКардио® — портативный кардиограф, который позволяет снять ЭКГ за 20 секунд без гелей и проводов. Запись 6 отведений с медицинской точностью, мгновенная расшифровка ЭКГ на основе ИИ и пульсоксиметрия. Кардиология и дистанционная диагностика сердца дома.',
     keywords: [
+        // Основные целевые запросы
         'кардиограф',
         'портативный кардиограф',
+        'прибор для ЭКГ',
+        'купить кардиограф',
+        // Вариации основных запросов
+        'беспроводной кардиограф',
+        'кардиограф для дома',
+        'домашний кардиограф',
+        'переносной кардиограф',
+        'компактный кардиограф',
+        'мини кардиограф',
+        'карманный кардиограф',
+        // ЭКГ запросы
         'снять ЭКГ',
         'ЭКГ дома',
         'сделать ЭКГ',
         'ЭКГ онлайн',
-        'кардиология',
-        'дистанционная ЭКГ',
+        'ЭКГ прибор',
+        'ЭКГ аппарат',
+        'прибор для снятия ЭКГ',
+        'аппарат для ЭКГ дома',
+        'электрокардиограф',
         'электрокардиограмма',
+        'измерение ЭКГ дома',
+        'домашний ЭКГ аппарат',
+        'персональный ЭКГ монитор',
         'расшифровка ЭКГ',
         'ЭКГ 6 отведений',
-        'портативный ЭКГ прибор',
-        'диагностика сердца',
+        'дистанционная ЭКГ',
+        // Функциональные запросы
+        'сатурация',
+        'пульсоксиметр',
+        'пульсоксиметрия',
         'мониторинг сердца',
         'кардиомонитор',
-        'пульсоксиметрия',
+        'кардиология',
+        'диагностика сердца',
         'аритмия',
-        'прибор для ЭКГ',
+        'измерить пульс',
+        'проверить сердце дома',
+        // Брендовые запросы
         'СмартКардио',
+        'СмартКардио®',
+        'Смарткардио',
         'SmartCardio',
+        // Коммерческие запросы
+        'кардиограф цена',
+        'кардиограф купить недорого',
+        'кардиограф стоимость',
+        'кардиограф заказать',
+        'кардиограф с доставкой',
+        // Технические запросы
+        'кардиограф российского производства',
+        'беспроводной ЭКГ',
+        'ЭКГ без проводов',
+        'ЭКГ без геля',
+        'мобильный кардиограф',
+        'кардиограф с приложением',
+        'кардиограф bluetooth',
+        // Медицинские запросы
+        'медицинский прибор для сердца',
+        'прибор для измерения сердцебиения',
+        'аппарат для контроля сердца',
+        'домашняя диагностика сердца',
     ],
-    authors: [{ name: 'СмартКардио®' }],
+    authors: [{ name: 'СмартКардио®', url: siteUrl }],
     creator: 'СмартКардио®',
     publisher: 'СмартКардио®',
     applicationName: 'СмартКардио®',
-    category: 'Бытовые приборы для здоровья',
+    generator: 'Next.js',
+    referrer: 'origin-when-cross-origin',
+    category: 'Медицинское оборудование',
+    classification: 'Медицинские приборы, Кардиография, ЭКГ',
     alternates: {
         canonical: '/',
+        languages: {
+            'ru-RU': siteUrl,
+        },
     },
     formatDetection: {
         telephone: true,
-        email: true,
-        address: true,
+        email: false,
+        address: false,
     },
     openGraph: {
         type: 'website',
         locale: 'ru_RU',
+        countryName: 'Россия',
         url: siteUrl,
         siteName: 'СмартКардио®',
         title: 'СмартКардио® — портативный кардиограф для ЭКГ дома и в клинике',
         description:
             'Снимите ЭКГ за 20 секунд без гелей и проводов. Запись 6 отведений с медицинской точностью и мгновенная расшифровка на основе ИИ.',
+        images: [
+            {
+                url: '/images/for-users.png',
+                width: 1200,
+                height: 630,
+                alt: 'Портативный кардиограф СмартКардио® для измерения ЭКГ дома',
+                type: 'image/png',
+            },
+            {
+                url: '/images/phones.png',
+                width: 800,
+                height: 600,
+                alt: 'Приложение СмартКардио® — расшифровка ЭКГ на смартфоне',
+                type: 'image/png',
+            },
+        ],
+    },
+    twitter: {
+        card: 'summary_large_image',
+        title: 'СмартКардио® — портативный кардиограф для ЭКГ дома',
+        description:
+            'Снимите ЭКГ за 20 секунд без гелей и проводов. Запись 6 отведений и мгновенная расшифровка на основе ИИ.',
+        images: ['/images/for-users.png'],
     },
     robots: {
         index: true,
         follow: true,
+        nocache: false,
         googleBot: {
             index: true,
             follow: true,
+            noimageindex: false,
             'max-image-preview': 'large',
             'max-snippet': -1,
             'max-video-preview': -1,
         },
+    },
+    other: {
+        'geo.region': 'RU',
+        'geo.placename': 'Россия',
+        'og:price:amount': '15600',
+        'og:price:currency': 'RUB',
+        'product:price:amount': '15600',
+        'product:price:currency': 'RUB',
+        'product:availability': 'in stock',
+        'product:condition': 'new',
+        'product:brand': 'СмартКардио®',
+        'msapplication-TileColor': '#ffffff',
     },
     icons: {
         icon: [
@@ -103,6 +199,27 @@ export default function RootLayout({
         <head>
             {/* Preload video poster to avoid duplicate fetch on hydration */}
             <link rel="preload" as="image" href="/images/smartcardioStart.webp" />
+
+            {/* Дополнительные SEO мета-теги */}
+            <meta httpEquiv="Content-Language" content="ru" />
+            <meta name="geo.region" content="RU" />
+            <meta name="geo.placename" content="Россия" />
+            <meta name="language" content="Russian" />
+            <meta name="audience" content="all" />
+            <meta name="distribution" content="global" />
+            <meta name="rating" content="general" />
+            <meta name="revisit-after" content="7 days" />
+            <meta name="coverage" content="Worldwide" />
+            <meta name="target" content="all" />
+            <meta name="HandheldFriendly" content="True" />
+            <meta name="MobileOptimized" content="320" />
+            <meta name="apple-mobile-web-app-capable" content="yes" />
+            <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+            <meta name="apple-mobile-web-app-title" content="СмартКардио®" />
+
+            {/* Оптимизация загрузки Яндекс.Метрики */}
+            <link rel="preconnect" href="https://mc.yandex.ru" />
+            <link rel="dns-prefetch" href="https://mc.yandex.ru" />
         </head>
         <body className="font-sans antialiased overflow-x-hidden max-w-full">
         <StructuredData />
@@ -161,6 +278,15 @@ export default function RootLayout({
                 __html: yandexMetrikaScript
             }}
         />
+        <noscript>
+            <div>
+                <img
+                    src="https://mc.yandex.ru/watch/91617395"
+                    style={{ position: "absolute", left: "-9999px" }}
+                    alt=""
+                />
+            </div>
+        </noscript>
 
         </body>
         </html>
